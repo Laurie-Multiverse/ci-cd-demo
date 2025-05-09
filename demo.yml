@@ -1,0 +1,22 @@
+name: Color Logger
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  log-color:
+    name: Log Color
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    # Select color
+    - name: Set selected color
+      run: echo '::set-output name=SELECTED_COLOR::green'
+      id: color-selector 
+
+    # Log color
+    - name: Get selected color
+      run: echo 'The selected color is ${{steps.color-selector.outputs.SELECTED_COLOR}}'
