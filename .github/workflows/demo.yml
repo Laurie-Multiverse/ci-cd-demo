@@ -1,0 +1,19 @@
+name: Demo Environment Variables
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  show-variables:
+    name: Show Variables
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set Environment Variables
+      run: echo "SELECTED_COLOR=green" >> $GITHUB_ENV
+
+    - name: Access Environment Variables
+      run: echo "The selected color is $SELECTED_COLOR"
