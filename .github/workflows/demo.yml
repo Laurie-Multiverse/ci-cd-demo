@@ -15,7 +15,7 @@ jobs:
     - name: Set Environment Variables
       run: |
         echo "SELECTED_COLOR=green" >> $GITHUB_ENV
-        echo "BUILD_TIMESTAMP=$(date)" >> #GITHUB_ENV
+        echo "BUILD_TIMESTAMP=$(date)" >> $GITHUB_ENV
 
     - name: Access Environment Variables
       run: |
