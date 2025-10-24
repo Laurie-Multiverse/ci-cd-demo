@@ -12,12 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set Environment Variables
-      run: |
-        echo "SELECTED_COLOR=green" >> $GITHUB_ENV
-        echo "BUILD_TIMESTAMP=$(date)" >> #GITHUB_ENV
+    - name: Set environment variables
+      run: echo "BUILD_TIMESTAMP=$(date)" >> $GITHUB_ENV
 
-    - name: Access Environment Variables
-      run: |
-        echo "The selected color is $SELECTED_COLOR"
-        echo "Build ran at $BUILD_TIMESTAMP"
+    - name: Access environment variables
+      run: echo "Build ran at $BUILD_TIMESTAMP"
