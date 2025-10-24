@@ -21,4 +21,3 @@ jobs:
       run: |
         echo "The selected color is $SELECTED_COLOR"
         echo "Build ran at $BUILD_TIMESTAMP"
-        
